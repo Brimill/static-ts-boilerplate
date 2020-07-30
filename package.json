@@ -1,0 +1,24 @@
+{
+  "name": "static-ts-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple boilerplate project with hot reloading for static websites using typescript.",
+  "main": "live-server.js",
+  "scripts": {
+    "start:dev": "concurrently \"npm run start:tsc\" \"npm run start:server\"",
+    "start:tsc": "tsc --watch",
+    "start:server": "node live-server.js",
+    "build": "rm -rf dist/js/ && tsc"
+  },
+  "keywords": [
+    "typescript",
+    "live-server",
+    "boilerplate"
+  ],
+  "author": "Rüdiger Erdweg",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "live-server": "^1.2.1",
+    "typescript": "^3.9.7"
+  }
+}
